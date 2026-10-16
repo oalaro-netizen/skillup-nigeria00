@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@source "../src";
+
+:root {
+  --color-primary: #008751;
+  --color-primary-light: #EAF6EF;
+  --color-white: #FFFFFF;
+  --color-heading: #111827;
+  --color-body: #374151;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-background: #ffffff;
+  --color-page-background: #eaf6ef;
+  --radius-lg: 0.75rem;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --spacing-2: 0.5rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+}
+
+/* Text utilities */
+.text-heading {
+  color: var(--color-heading);
+}
+.text-body {
+  color: var(--color-body);
+}
+.text-muted {
+  color: var(--color-muted);
+}
+
+/* Button utilities */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  box-shadow: var(--shadow-md);
+}
+.btn-primary:hover {
+  background-color: #007347;
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+}
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Card utility */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-6);
+}
+
+/* Container utility */
+.container-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+  background-color: var(--color-page-background);
+}
